@@ -4,6 +4,7 @@ Run the following commands to install app:
 
 - git clone https://github.com/michaelmaben/tinyurl.git
 - bundle install
+- yarn install
 - rails db:migrate
 - rails s (by default the server will use port 3000)
 
