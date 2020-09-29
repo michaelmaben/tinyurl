@@ -5,6 +5,7 @@ class Link < ApplicationRecord
   validates :full_url, format: URI::regexp(%w[http https])
   validates :short_url, presence: true
   validates :full_url, presence: true
+  validates :full_url, uniqueness: true
   validates :short_url, uniqueness: true
 
   private
