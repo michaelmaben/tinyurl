@@ -1,0 +1,20 @@
+<% content_for :title do %>Link<% end %>
+<h3>Create Link</h3>
+  <% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+<div class="form">
+<%= form_with model: @link,  local: true do |f| %>
+  <div>
+    <%= label_tag(:full_url, "Full URL: ") %>
+    <%= f.text_field :full_url %>
+  </div>
+  <div>
+    <%= label_tag(:short_url, "Short URL: (") %>
+    <%= request.base_url%>/)<%= f.text_field :short_url, disabled: true%>
+  </div>
+  <div>
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,32 @@
+<table class="table">
+  <h3>Link Details</h3>
+  <tbody>
+    <tr>
+      <td> Long URL: </td>
+      <td><%= @link.full_url %> </td>
+    </tr>
+    <tr>
+      <td> Short URL: </td>
+      <td> <%= request.base_url%>/<%= @link.short_url %> </td>
+    </tr>
+    <tr>
+      <td> Visit Count: </td>
+      <td> <%= @link.visit_count %> </td>
+    </tr>
+    <tr>
+      <td> Recent Visit details: </td>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+    <% @visits.each do |visit| %>
+      <tr>
+          <td><%= visit.visit_date %> </td>
+          <td> <%= visit.city %> </td>
+          <td> <%= visit.country %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table

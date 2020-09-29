@@ -1,0 +1,15 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+div {
+  margin-bottom: 10px;
+}
+label, select  {
+  display: inline-block;
+  width: 15%;
+  text-align: right;
+}
+
+input[type=text]{
+  width: 40%;
+}

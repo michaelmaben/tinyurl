@@ -15,14 +15,15 @@ ActiveRecord::Schema.define(version: 2020_09_28_130036) do
   create_table "links", force: :cascade do |t|
     t.string "short_url"
     t.text "full_url"
-    t.integer "visit_count"
+    t.integer "visit_count", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "visits", force: :cascade do |t|
-    t.datetime "last_visit_date"
-    t.string "geo_location"
+    t.string "city"
+    t.string "country"
+    t.datetime "visit_date"
     t.integer "link_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
