@@ -4,6 +4,7 @@ Run the following commands to install app:
 
 - git clone https://github.com/michaelmaben/tinyurl.git
 - bundle install
+- yarn install
 - rails db:migrate
 - rails s (by default the server will use port 3000)
 
@@ -17,3 +18,9 @@ Create a tiny url
 
 Display Statistics of a url
   - Click on "Get Statistics" on the side of the URL in index page or type in http://localhost:3000/links/:id in the browser
+
+Screenshots:
+
+![](images/list_links.png)
+
+![](images/links_detail.png)
